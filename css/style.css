@@ -858,11 +858,12 @@ a {
 }
 .icon-checkbox{
     display: inline-block;
-    width: 15px;
+    width: 16px;
     height: 15px;
     border: 2px solid var(--main-text-color);
     border-radius: 4px;
-    padding-right: 7px;
+    margin-right: 7px;
+    margin-left: 14px;
 }
 .label-checkbox{
     display: inline-block;
@@ -882,8 +883,6 @@ a {
     background-size: contain;
     background-origin: border-box;
 }
-
-
 
 .btn-submit-form{
     display: block;
