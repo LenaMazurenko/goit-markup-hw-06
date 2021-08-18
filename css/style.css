@@ -786,18 +786,19 @@ a {
     display: block;
     margin-bottom: 10px;
     height: 58px;
-
-    cursor: pointer;
 }
 .form-label {
+    display: inline-block;
     font-size: 12px;
     line-height: 1.1;
     letter-spacing: 0.01em;
     margin-bottom: 4px;
+    cursor: pointer;
 
     color: var(--secondary-text-color);
 }
 .form-input{
+    display: inline-block;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -814,7 +815,8 @@ a {
 .form-input:focus-within + .icon-in-input {
     fill: var(--active-color);
 }
-.form-input:focus-within {
+.form-input:focus-within,
+.txtarea-input:focus-within {
     border: 1px solid var(--active-color);
     outline: none;
 }
@@ -822,25 +824,40 @@ a {
 
 
 .txtarea-field {
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 100%;
     height: auto;
     cursor: pointer;
-    border: 1px solid red;
 }
 .txtarea-input{
     resize: none;
     width: 100%;
- 
-}
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    cursor: pointer;
+    outline: none;
+    font: inherit;
+ }
 
 
-.checkbox-block {
+.checkbox-label {
+    display: block;
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.btn-submit{
-margin: 0 auto;
-padding: 0;
+
+
+
+.btn-submit-form{
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+.txtarea-input::placeholder{
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
 }
