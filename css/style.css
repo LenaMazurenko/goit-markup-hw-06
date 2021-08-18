@@ -567,10 +567,12 @@ a {
     display: flex;
 }
 
+/*contacts-block-in-footer*/
 .contacts-block-in-footer {
     padding-top: 60px;
     padding-bottom: 60px;
     margin-right: 70px;
+    width: 231px;
 }
 
 .footer .logo {
@@ -605,12 +607,15 @@ a {
     margin-bottom: 9px;
 }
 
+/*join-block-in-footer*/
 .join-block-in-footer {
     padding-top: 72px;
     padding-bottom: 100px;
+    margin-right: 93px;
 }
 
-.join-block-in-footer h2 {
+.join-block-in-footer h2,
+.newsletter-block-in-footer h2 {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -637,6 +642,68 @@ a {
     background-color: var(--active-color);
 }
 
+/*newsletter-block-in-footer*/
+.newsletter-block-in-footer {
+    padding-top: 72px;
+    padding-bottom: 94px;
+}
+.form-newsletter {
+    margin-top: 20px;
+    display: flex;
+}
+.input-newsletter {
+    font-size: 16px;
+    line-height: 1.2;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: var(--white-text-color);
+
+    padding: 15px 16px;
+    margin-right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    height: 50px;
+    width: 358px;
+    background-color: var(--dark-bg-color);
+    outline: none;
+}
+.input-newsletter::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+.btn-newsletter {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    padding: 10px 62px 10px 29px;
+
+    font-family: inherit;
+    background-color: var(--active-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: var(--white-text-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-newsletter:hover,
+.btn-newsletter:focus {
+    background-color: var(--second-active-color);
+}
+.svg-newsletter {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+}
 /*--------------------Modal Window-----------------*/
 .backdrop {
     position: fixed;
@@ -663,7 +730,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 8px;
+    /*padding: 8px;*/
     height: 581px;
     width: 528px;
 
@@ -676,13 +743,104 @@ a {
 }
 .btn-close {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     width: 30px;
     height: 30px;
+    top: 8px;
+    right: 8px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
     margin-left: auto;
 
     background-color: var(--main-bg-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+}
+
+/*form of modal*/
+.form {
+    margin: 40px;
+}
+
+.inputs-modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2 {
+    margin-bottom: 12px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+}
+
+.form-field {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    height: 58px;
+
+    cursor: pointer;
+}
+.form-label {
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+
+    color: var(--secondary-text-color);
+}
+.form-input{
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 42px;
+    cursor: pointer;
+
+    font: inherit;
+}
+.icon-in-input {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+.form-input:focus-within + .icon-in-input {
+    fill: var(--active-color);
+}
+.form-input:focus-within {
+    border: 1px solid var(--active-color);
+    outline: none;
+}
+
+
+
+.txtarea-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid red;
+}
+.txtarea-input{
+    resize: none;
+    width: 100%;
+ 
+}
+
+
+.checkbox-block {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.btn-submit{
+margin: 0 auto;
+padding: 0;
 }
