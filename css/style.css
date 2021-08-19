@@ -729,9 +729,10 @@ a {
 .modal-window {
     position: absolute;
     top: 50%;
-    left: 50%;padding: 40px;
+    left: 50%;
+    padding: 40px;
     /*padding: 8px;*/
-        
+
     height: 581px;
     width: 528px;
 
@@ -761,7 +762,7 @@ a {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-close:hover .icon-close {
-   fill: blue;
+    fill: blue;
 }
 
 /*------form of modal------*/
@@ -783,22 +784,27 @@ a {
 }
 
 .form-field {
-    position: relative;
-    display: block;
     margin-bottom: 10px;
-    height: 58px;
+}
+.form-field label {
+    display: block;
 }
 .form-label {
     display: inline-block;
     font-size: 12px;
     line-height: 1.1;
     letter-spacing: 0.01em;
-    margin-bottom: 4px;
     cursor: pointer;
+    padding: 0;
 
     color: var(--secondary-text-color);
 }
-.form-input{
+.form-input-block {
+    position: relative;
+    margin-top: 4px;
+}
+
+.form-input {
     display: inline-block;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -809,7 +815,7 @@ a {
 }
 .icon-in-input {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 15px;
 }
 .form-input:focus-within + .icon-in-input {
@@ -821,24 +827,22 @@ a {
     outline: none;
 }
 
-
-
 .txtarea-field {
     display: block;
     width: 100%;
     height: auto;
     cursor: pointer;
 }
-.txtarea-input{
+.txtarea-input {
     resize: none;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 12px 16px;
     outline: none;
-   
- }
-.txtarea-input::placeholder{
+    margin-top: 4px;
+}
+.txtarea-input::placeholder {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.01em;
@@ -850,12 +854,11 @@ a {
     display: flex;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 30px;
 }
-.checkbox{
+.checkbox {
     display: inline-block;
 }
-.icon-checkbox{
+.icon-checkbox {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -864,7 +867,7 @@ a {
     margin-right: 7px;
     margin-left: 14px;
 }
-.label-checkbox{
+.label-checkbox {
     display: inline-block;
     font-size: 14px;
     line-height: 1.8;
@@ -872,19 +875,19 @@ a {
 
     color: var(--secondary-text-color);
 }
-.label-checkbox a{
+.label-checkbox a {
     display: inline-block;
 }
-.checkbox:checked + .icon-checkbox{
-   border-color: transparent;
-   background-color: var(--active-color);
+.checkbox:checked + .icon-checkbox {
+    border-color: transparent;
+    background-color: var(--active-color);
     background-image: url("../images/svg/check.svg");
     background-size: contain;
     background-origin: border-box;
 }
 
-.btn-submit-form{
+.btn-submit-form {
     display: block;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     padding: 0;
 }
